@@ -1,0 +1,211 @@
+/* this style is in Agri_Advice.html,image scrollable page.html */
+
+
+/* this is Agri_Advice section */
+
+
+
+.heading{
+    text-align: center;
+    color: white;
+}
+.main{
+    background: linear-gradient(to right, rgb(220, 213, 213) , rgb(197, 152, 26));
+    border: 3px solid red;
+    height: auto;
+    width: 300px;
+    border-radius: 20px;
+    font-size: 20px;
+  float:right;
+  margin: 20px;
+  padding: 5px;
+    
+  }
+.first{
+  margin: 50px;
+}
+  .img{
+    border-radius: 20px;
+  }
+  
+  a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+
+/* font-weight:bold; */
+  }
+p{
+    font-size: 25px;
+    padding: 10px;
+}
+
+
+/* End section of Agri_Advice section */
+
+
+
+
+/* start  Agri_Advice  page  */
+
+
+
+
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;} 
+
+/* Slideshow container */
+.slideshow-container {
+  width: auto;
+  /* height: 200px; */
+  position: relative;
+  margin: -10px;
+}
+
+
+
+
+/* The dots/bullets/indicators */
+/* .dot {
+  height: 10px;
+  width: 10px;
+  margin: 0 2px;
+  background-color: #000000;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+} */
+
+/* .active {
+  background-color: #ffffff;
+} */
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 0.9}
+}
+
+/* On smaller screens, decrease text size */
+/* @media only screen and (max-width: 700px) {
+  .first {font-size: 50px}
+} */
+
+
+
+
+/* this is image scrollable page :start */
+
+div.scroll-container {
+  background-color: #01030d;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+ 
+
+}
+
+div.scroll-container img {
+  padding: 10px;
+  border-radius: 40px;
+}
+div.scroll-container h1{
+color: white;
+margin-left: 20px;
+font-family: 'Times New Roman', Times, serif;
+font-size: 50px;
+
+}
+div.scroll-container p{
+  color: rgb(0, 38, 255);
+  margin-top: -40px;
+}
+
+
+/* this is about_us page section  */
+
+.about_us{
+  height: auto;
+  width: 100%;
+  /* border: 5px solid rgb(0, 0, 0); */
+  margin-top: 20px;
+}
+
+.Agri{
+  height: 400px;
+  width: auto;
+margin: -20px;
+  text-align: center;
+  background: linear-gradient(to right, rgb(223, 214, 214) , rgb(159, 159, 113));
+}
+
+.about_us .image1 {
+  height: 700px;
+  width: 1000px;
+  margin: 0 0 0 -10px;
+  /* background-color: rgb(64, 183, 113); */
+}
+.about_us h1{
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: rgb(255, 255, 255);
+}
+
+.about_us .image1 .inside{
+  /* border: 5px outset black; */
+  float: right;
+  height: 450px;
+  width: 930px;
+position: absolute;
+left: 600px;
+top: 600px;
+background-color: rgb(247, 247, 247);
+padding: 30px;
+padding-right: 40px;
+/* box-sizing: border-box; */
+box-shadow: 5px 10px 10px 2px  gray;
+}
+
+.about_us .image1 .inside h1{
+  color: red;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ 
+
+}
+.about_us .image1 .inside p{
+  color: rgb(114, 114, 115);
+}
+.about_us .image1 img{
+height: 700px;
+width: 1000px;
+  border-radius: 20px;
+}
+
+
+
+.button {
+  float: right;
+  display: inline-block;
+  padding: 10px 20px;
+
+  font-size: 18px;
+  background-color: #c58e0e;
+  color: #000000;
+  font-weight: bolder;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  
+}
+
+/* Hover effect */
+.button:hover {
+  background-color:#daa731;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+

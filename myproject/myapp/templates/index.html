@@ -1,0 +1,252 @@
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+	<title>Department of Agriculture, Farmers, and Culture</title>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+
+
+	<link rel="stylesheet" href="{% static 'css/mynav.css' %}">
+    <link rel="stylesheet" href= "{% static 'css/banner.css' %}">
+    {% comment %} <link rel="stylesheet" href= "{% static 'css/register.css' %}"> {% endcomment %}
+
+	<link rel="stylesheet" href="{% static 'css/animation.css' %}">
+	<link rel="stylesheet" href="{% static 'css/services.css' %}">
+	<script src="nav.js"></script>
+    <link rel="stylesheet" href="{% static 'css/precesion.css' %}">
+
+	<link rel="stylesheet" href="{% static 'css/main.css' %}">
+	<link rel="stylesheet" href="{% static 'css/cardSec.css' %}">
+	<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+	<!-- google fonts -->
+
+	<style>
+		.newsLetter {
+			height: 10em;
+			width: 100%;
+		}
+
+		.slider {
+			height: 29em;
+			width: 100%;
+		}
+
+		.feedback {
+			{% comment %} border: 2px solid red; {% endcomment %}
+			width: 100%;
+		}
+
+		.footer {
+			{% comment %} border: 2px solid red; {% endcomment %}
+			height: 19em;
+			width: 100%;
+		}
+	</style>
+</head>
+
+<body style="overflow-x: hidden;">
+	<div class="container-xxl">
+
+ <!-- Navigation -->
+ {% include "navbar.html" %}
+		 
+		
+
+		{% comment %} Chat Bot {% endcomment %}
+		<script>
+			window.watsonAssistantChatOptions = {
+			  integrationID: "c393440a-5d0b-4bb4-a025-6742a16a1112", // The ID of this integration.
+			  region: "eu-gb", // The region your integration is hosted in.
+			  serviceInstanceID: "a03b9b81-d702-4381-83b7-8354b122478f", // The ID of your service instance.
+			  onLoad: async (instance) => { await instance.render(); }
+			};
+			setTimeout(function(){
+			  const t=document.createElement('script');
+			  t.src="https://web-chat.global.assistant.watson.appdomain.cloud/versions/" + (window.watsonAssistantChatOptions.clientVersion || 'latest') + "/WatsonAssistantChatEntry.js";
+			  document.head.appendChild(t);
+			});
+		  </script>
+
+		<div class="slider">
+			<div class="imgSlider mt-4">
+				{% comment %} <h1 class="text-center">Green India</h1> {% endcomment %}
+			</div>
+		</div>
+
+		<div class="Chat_room_entry">
+			{% include 'sidebar.html' %}
+			{% comment %} CHAT ROOM {% endcomment %}
+		{% include 'Chat_home.html' %}
+
+		</div>
+
+		<script>
+		
+let sidebar_icon = document.getElementById('sidebar_icon');
+let side_container = document.getElementById('side_container');
+let sidebar_hide = document.getElementById('sidebar_hide');
+let chat_room = document.getElementById('chat_room');
+let outerPageBtn = document.getElementById('outerPageBtn');
+outerPageBtn.addEventListener('click',()=>{
+	if(side_container.innerHTML.trim() === ''){
+chat_room.style.display='inline';
+chat_room.style.position = 'relative';
+chat_room.style.bottom = '250px';
+sidebar_hide.style.display='none';
+}
+
+})
+sidebar_icon.addEventListener('click',()=>{
+	chat_room.style.display='none';
+	sidebar_hide.style.display='inline';
+})
+		</script>
+
+
+		<!-- card sec -->
+		<div class="feedback mt-4">
+			<div class="card-deck">
+				<div class="card text-center p-4">
+					<h5 class="card-title  text-uppercase  font-weight-bold text-success">Farmer</h5>
+
+					<i class="fa-solid fa-tractor fa-2xl p-4"></i><br>
+					<div class="card-body text-center">
+						<p class="card-text ">Emphasizes environmentally friendly and socially responsible practices to promote long-term agricultural health.</p>
+						<button type="button" class="btn btn-outline-success">
+							<a href='https://testbook.com/ias-preparation/agriculture-schemes-in-india'>View</a></button>
+
+					</div>
+
+				</div>
+
+
+				<div id='other' class="card text-center p-4">
+					<h5 class="card-title  text-uppercase  font-weight-bold text-success">animal husbandry</h5>
+
+					<i class="fa-solid fa-cow fa-2xl p-4"></i><br>
+					<div class="card-body text-center">
+						<p class="card-text  ">Animal husbandry is the branch of agriculture that involves the breeding, care, and management of domesticated animals.</p>
+						<button type="button" class="btn btn-outline-success"><a href="{% url 'animals' %}" >View</a></button>
+
+					</div>
+
+				</div>
+				<div class="card text-center p-4">
+					<h5 class="card-title  text-uppercase  font-weight-bold text-success">Tools</h5>
+
+					<i class="fa-solid fa-trowel fa-2xl p-4"></i><br>
+					<div class="card-body text-center">
+
+						<p class="card-text  ">We provide information on some modern and advanced farming equipment and technologies  new innovations</p>
+						<button type="button" class="btn btn-outline-success ">
+						<a href="{% url 'tools' %}">	View</a></button>
+					</div>
+
+
+				</div>
+			</div>
+
+
+		</div>
+
+
+		<div class="testing">
+		
+		</div>
+
+
+
+		{% comment %} PRECISION FARMING {% endcomment %}
+		<div class="precesion_main">
+			<div class="precesion_text">
+				<h2>Precision Farming! The Future of Farming</h2>
+				<p>All the farmers in that area follow the same procedures with respect to sowing, nourishing, irrigation, and harvesting period.</p>
+				<p>Since farmers had no information on their farms, there was no way of learning the causes for crop loss. This practice pushed the farmers towards losses and debt.</p>
+				<button type="submit" class="precesion_btn"><a href="{% url 'precesion' %}">Show More..</a></button>
+			</div>
+			<img class="precesion-image" src="{% static 'precesionimg/Top.jpg' %}" alt="Farming Image">
+		</div>
+		{% include 'tool_card.html' %}
+
+		{% comment %} {% include "contact_us.html" %} {% endcomment %}
+		{% comment %} ABOUT US {% endcomment %}
+		{% include "about_us.html" %}
+
+
+		{% comment %} TEAM {% endcomment %}
+		{% include 'team.html' %}
+		{% include 'mail_letter.html' %}
+
+		
+
+		<!-- footer -->
+		<section class="custom-footer" style="margin-top: 80px;">
+			<div class="custom-foot-container">
+				<div class="custom-foot">
+					<h3 class="footer-title">Quick Links</h3>
+					<a href="#" class="footer-link"> <i class="fas fa-chevron-right"></i> Home </a>
+					<a href="#" class="footer-link"> <i class="fas fa-chevron-right"></i> Blogs </a>
+					<a href="#" class="footer-link"> <i class="fas fa-chevron-right"></i> About</a>
+					<a href="#" class="footer-link"> <i class="fas fa-chevron-right"></i> Our Team </a>
+					<a href="#" class="footer-link"> <i class="fas fa-chevron-right"></i> Contact Us </a>
+					<a href="#" class="footer-link"> <i class="fas fa-chevron-right"></i> More About Us</a>
+				</div>
+		
+				<div class="custom-foot">
+					<h3 class="footer-title">Contact Info</h3>
+					<a href="#" class="footer-link"> <i class="fas fa-phone"></i>+91789456123 </a>
+					<a href="#" class="footer-link"> <i class="fas fa-envelope"></i>ecogrowersweb@gmail.com </a>
+					<a href="#" class="footer-link"> <i class="fas fa-map-marker-alt"></i>Allahabad, U.P</a>
+				</div>
+		
+				<div class="custom-foot">
+					<h3 class="footer-title">Follow Us!!!</h3>
+					<a href="#" class="footer-link"> <i class="fab fa-facebook"></i>Facebook </a>
+					<a href="#" class="footer-link"> <i class="fab fa-twitter"></i>Twitter </a>
+					<a href="#" class="footer-link"> <i class="fab fa-instagram"></i>Instagram</a>
+					<a href="#" class="footer-link"> <i class="fab fa-linkedin"></i>LinkedIn </a>
+					<a href="#" class="footer-link"> <i class="fab fa-youtube"></i>YouTube </a>
+				</div>
+			</div>
+		
+			<div class="custom-quotes-reviews">
+				<h3 class="footer-title">Reviews</h3>
+				<p>"Ecogrowersweb is a fantastic resource for all things related to agriculture. The information provided is both insightful and practical."</p>
+				<p>"I love the blogs on ecogrowersweb! They provide valuable insights into sustainable farming practices."</p>
+			</div>
+		
+			<div class="custom-credit">
+				Created By <span>ECOGROWERSWEB</span> | All Rights Reserved
+			</div>
+		</section>
+		
+		
+	
+
+
+	<!-- Optional JavaScript -->
+
+
+	<scripts src="{% static 'js/nav.js' %}"></script>		
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+		crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>

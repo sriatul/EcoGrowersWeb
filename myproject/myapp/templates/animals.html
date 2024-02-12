@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+       .heading{
+        border: 8px rgba(215,145,69,1)  groove;
+        padding: 15px 15px;
+        margin: 2em 15em;
+        background: rgb(255,228,127);
+        background: linear-gradient(90deg, rgba(255,228,127,1) 0%, rgba(215,145,69,1) 15%, rgba(255,203,105,1) 95%);
+       }
+       h1{
+        font-size: 36px;
+        padding-left: 2em;
+       }
+       .heading img{
+        height: 7em;
+        width: 7em;
+        border-radius: 50%;
+        float: right;
+        margin: -6em 0;
+   
+       }
+       
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+            margin: 2em 15em;
+        }
+
+        .grid-item {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .grid-item img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+
+     
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .grid-item:hover .overlay {
+            opacity: 1;
+        }
+
+        .overlay-text {
+            font-size: 16px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="heading"><h1>Animal Husbandary</h1>
+        <img src="{% static 'animal_img/logo.png' %}" alt="">
+</div>
+
+<div class="grid-container">
+    <div class="grid-item">
+        <img src="{% static 'animal_img/live1.jpg' %}" alt="livestock 1">
+        <div class="overlay">
+            <p class="overlay-text">Cattle</p>
+            <p class="overlay-text"><a href="https://agritech.tnau.ac.in/animal_husbandry/animhus_cattle%20_index_page.html"style="text-decoration: none; color:#fff">More Info</a></p>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="{% static 'animal_img/buffalo.jpg' %}" alt="livestock 2">
+        <div class="overlay">
+            <p class="overlay-text">Buffalo</p>
+            <p class="overlay-text"><a href="https://agritech.tnau.ac.in/animal_husbandry/animhus_cattle%20_index_page.html"style="text-decoration: none; color:#fff">More Info</a></p>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="{% static 'animal_img/goat.jpg' %}" alt="livestock 3">
+        <div class="overlay">
+            <p class="overlay-text">Goat</p>
+            <p class="overlay-text"><a href="https://agritech.tnau.ac.in/animal_husbandry/animhus_cattle%20_index_page.html"style="text-decoration: none; color:#fff">More Info</a></p>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="{% static 'animal_img/sheep].jpg' %}" alt="Kitten 2">
+        <div class="overlay">
+            <p class="overlay-text">Sheep</p>
+            <p class="overlay-text"><a href="https://agritech.tnau.ac.in/animal_husbandry/animhus_cattle%20_index_page.html"style="text-decoration: none; color:#fff">More Info</a></p>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="{% static 'animal_img/pigo.jpg' %}" alt="Kitten 2">
+        <div class="overlay">
+            <p class="overlay-text">Pig</p>
+            <p class="overlay-text"><a href="https://agritech.tnau.ac.in/animal_husbandry/animhus_cattle%20_index_page.html"style="text-decoration: none; color:#fff">More Info</a></p>
+        </div>
+    </div>
+    <div class="grid-item">
+        <img src="{% static 'animal_img/hen.jpg' %}" alt="Kitten 2">
+        <div class="overlay">
+            <p class="overlay-text">Hen</p>
+            <p class="overlay-text"><a href="https://agritech.tnau.ac.in/animal_husbandry/animhus_cattle%20_index_page.html" style="text-decoration: none; color:#fff">More Info</a></p>
+        </div>
+    </div>
+    <!-- Add more grid items as needed -->
+</div>
+
+</body>
+</html>

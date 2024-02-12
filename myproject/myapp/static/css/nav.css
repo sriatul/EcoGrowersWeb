@@ -1,0 +1,39 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;1,600&family=Space+Mono&display=swap');
+.navdiv {
+    height: 3em;
+    width: 100%;
+    font-size: 1.2em;
+    /* font-family: 'IBM Plex Mono', monospace; */
+    /* font-family: 'Space Mono', monospace; */
+    font-family: 'Xanh Mono', monospace;
+  letter-spacing: 0.1em;
+
+}
+/* .navdiv::after{
+ content: "";
+ position: absolute;
+height: 3em;
+width: 100%; 
+background-image: url(../images/navbg.jpg);
+background-size: cover;
+z-index: -1;
+opacity: 0.7;
+} */
+
+.logo {
+	height: 4em;
+	width: 4em;
+	
+}
+.nav-item a{
+    list-style: none;
+   
+    color: #8ab968 ;
+    font-weight: bold;
+    filter: drop-shadow(3px 1px 1px #0a2f03d7);
+    
+}
+.nav-item a:hover{
+    color:rgb(10, 25, 1);
+}

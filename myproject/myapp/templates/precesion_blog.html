@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/precesion.css' %}">
+</head>
+<body>
+    <div class="main">
+        <div class="text">
+            <h2>Precision Farming! The Future of Farming</h2>
+            <p>All the farmers in that area follow the same procedures with respect to sowing, nourishing, irrigation, and harvesting period.</p>
+            <p>Since farmers had no information on their farms, there was no way of learning the causes for crop loss. This practice pushed the farmers towards losses and debt.</p>
+            <button type="submit"><a href="{% url 'precesion' %}">Show More..</a></button>
+        </div>
+        <img src="{% static 'animal_img/cow.jpg' %}" alt="Farming Image" class="main-image">
+    </div>
+</body>
+</html>

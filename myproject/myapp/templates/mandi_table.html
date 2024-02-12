@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+<link rel="stylesheet" href="css\mandi.css">
+</head>
+<body>
+  <!-- <div class="Agri">
+    <h1>Welcome to My Website</h1>
+    <p>This website belongs to farming and farming machinary. Created and Managed by ADIT team. Content owned and updated by Adit.</p>
+  </div> -->
+
+  
+    <div class="image-container">
+        <img class="image" src="Image/about.jpg" alt="Image 1" onclick="openModal('Image/about.jpg')">
+    </div>
+
+
+    <div class="image-container">
+        <img class="image" src="Image/Yielding.jpg" alt="Image 2" onclick="openModal('Image/about.jpg')">
+    </div>
+
+
+    <div class="image-container">
+        <img class="image" src="Image/7.jpg" alt="Image 3" onclick="openModal('Image/about.jpg')">
+    </div>
+
+
+
+    <div class="image-container">
+        <img class="image" src="Image/samman.jpg" alt="Image 4" onclick="openModal('Image/about.jpg')">
+    </div>
+
+
+    <div class="image-container">
+      <img class="image" src="Image/6.jpg" alt="Image 4" onclick="openModal('Image/about.jpg')">
+
+
+
+  </div>  
+  
+  <div class="image-container">
+    <img class="image" src="Image/4.jpg" alt="Image 4" onclick="openModal('Image/about.jpg')">
+</div>
+
+
+<div class="image-container">
+  <img class="image" src="Image/5.jpg" alt="Image 4" onclick="openModal('Image/about.jpg')">
+
+
+</div>  <div class="image-container">
+  <img class="image" src="Image/8.jpg" alt="Image 4" onclick="openModal('Image/about.jpg')">
+</div>
+
+
+
+
+
+    <div id="myModal" class="modal">
+
+        <span class="close-button" onclick="closeModal()">&times;</span>
+
+        <img class="modal-image" id="modalImg">
+
+    </div>
+
+    <script>
+        function openModal(imageSrc) {
+            const modal = document.getElementById('myModal');
+            const modalImg = document.getElementById('modalImg');
+            modal.style.display = 'block';
+            modalImg.src = imageSrc;
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
+
+
+        
+    </script>
+</body>
+</html>

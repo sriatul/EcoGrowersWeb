@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% load static %}
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>about_us</title>
+  {% comment %} <link rel="stylesheet" href="{% static 'css1\style.css' %}"> {% endcomment %}
+  <style>
+  @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,500;1,600&family=Space+Mono&display=swap');
+
+  .about_us .img{
+      border-radius: 20px;
+  }    
+  .about_us a{
+      text-decoration: none;
+      color: rgb(0, 0, 0);
+  
+  
+    }
+  .about_us p{
+      font-size: 25px;
+      padding: 10px;
+      border-bottom:2px red solid
+  }
+
+.mySlides {display: none;}
+img {vertical-align: middle;} 
+
+/* Slideshow container */
+.slideshow-container {
+  width: auto;
+  /* height: 200px; */
+  position: relative;
+  margin: -10px;
+}
+div.scroll-container {
+  background-color: #01030d;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+ 
+
+}
+
+div.scroll-container img {
+  padding: 10px;
+  border-radius: 40px;
+}
+div.scroll-container h1{
+color: white;
+margin-left: 20px;
+font-family: 'Xanh Mono', monospace;
+
+font-size: 50px;
+
+}
+div.scroll-container p{
+  color: rgb(0, 38, 255);
+  margin-top: -40px;
+}
+
+
+/* this is about_us page section  */
+
+.about_us{
+  height: auto;
+  width: 100%;
+  margin-top: 20px;
+}
+
+
+
+.about_us .image1 {
+  height: 700px;
+  width: 1000px;
+  margin: 0 0 0 -10px;
+}
+.about_us h3{
+  text-align: center;
+  font-family: 'Xanh Mono', monospace;
+
+  color: rgb(255, 255, 255);
+}
+
+.about_us .image1 .inside{
+  /* border: 5px outset black; */
+  float: right;
+  height: 480px;
+  width: 750px;
+position: absolute;
+left: 800px;
+top: 2100px;
+background-color: rgb(247, 247, 247);
+padding: 30px;
+padding-right: 40px;
+
+box-shadow: 5px 10px 10px 2px  gray;
+}
+
+.about_us .image1 .inside h3{
+  color: red;
+  font-family: 'Xanh Mono', monospace;
+
+
+}
+.about_us .image1 .inside p{
+  color: rgb(114, 114, 115);
+}
+.about_us .image1 img{
+height: 700px;
+width: 1000px;
+  border-radius: 20px;
+}
+
+
+
+.button {
+  float: right;
+  display: inline-block;
+  padding: 10px 20px;
+
+  font-size: 18px;
+  background-color: #c58e0e;
+  color: #000000;
+  font-weight: bolder;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+  position:relative;bottom:40px
+}
+
+/* Hover effect */
+.button:hover {
+  background-color:#daa731;
+  box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+}
+
+.inside{
+  position:relative;top:1000px;
+}
+  </style>
+</head>
+
+
+<body >
+
+  <div class="about_us" id='about'>
+  
+    <div class="image1">
+      <img src="{% static 'images/man.jpg' %}" alt="ADIT">
+      {% comment %} <img src="static/images/logo.jpg" alt="Logo" class="logo"> {% endcomment %}
+      <div class="inside">
+          <p>WHO WE ARE  </p>
+           <h3>Welcome to Sustainable Farming, where we cultivate a vision for a healthier and greener tomorrow. Committed to transforming the agricultural landscape, we are a dedicated team of farmers</h3>
+           <p> We invite you to join us on this journey. Together, we can cultivate a greener, healthier, and more sustainable future for generations to come.</p>
+
+                <a href="#" class="button">Meet Our Team</a>
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

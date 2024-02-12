@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href= "{% static "css/login.css" %}">
+
+  
+  <div class="container  shadow-md p-5 mt-5 form-layout">
+    <i class="fa-solid fa-user-check"  style="position:relative;left:3.5em;font-size: 3em;color:darkgreen;"></i>
+    
+    <h1> Login Your Account</h1>
+    <form method="POST" autocomplete="off">
+  {% csrf_token %}
+  {{form.as_p}}
+  
+  <button type="submit" data-toggle="button" class="btn btn-success w-100 btn-block p-2">Login</button>
+  </form>
+   <div class="text-center">
+<small>
+  Don't have an account? <a href="{% url 'register' %}" class="link-secondary">Register Now!</a>
+</small><br>
+
+   </div>
+  </div>
+
+  </body>
+
+{% endblock  %}

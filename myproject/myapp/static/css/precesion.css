@@ -1,0 +1,100 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+}
+
+.precesion_main{
+    border-radius: 20px;
+    display: flex;
+    max-width: 80rem;
+    margin: 5rem auto;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.precesion_text{
+    flex: 1;
+    padding: 30px;
+    max-width: 40rem;
+    background-color: rgb(217, 217, 217);
+    border-radius: 20px;
+}
+
+.precesion_text h2 {
+    color: blue;
+    font-size: 30px;
+}
+
+.precesion_text p {
+    font-size: 20px;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.precesion-imag {
+    width: 100%;
+    max-width: 45rem;
+    height: auto;
+    border-radius: 10px;
+    margin-top: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.precesion_btn {
+    display: block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border: none;
+    border-radius: 10px;
+    background-color: rgb(101, 2, 2);
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.precesion_btn:hover {
+    background-color: #464646;
+    color: black;
+}
+
+.precesion_btn a {
+    text-decoration: none;
+    color: white;
+}
+
+@media screen and (max-width: 600px) {
+    .precesion_main{
+        flex-direction: column;
+        max-width: 100%;
+    }
+
+    .precesion_text {
+        max-width: 100%;
+    }
+
+    .precesion-imag {
+        max-width: 100%;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+    .precesion_main {
+        flex-direction: row;
+    }
+
+    .precesion_text {
+        max-width: 50%;
+    }
+
+    .precesion-imag {
+        max-width: 50%;
+    }
+}

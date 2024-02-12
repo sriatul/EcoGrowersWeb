@@ -1,0 +1,86 @@
+.Agri{
+    height: 400px;
+    width: auto;
+    /* background-color: rgb(204, 193, 181); */
+    text-align: center;
+    margin: -20px;
+    background: linear-gradient(to right, rgb(223, 214, 214) , rgb(159, 159, 113));
+}
+.Agri h1{
+    text-align: center;
+}
+
+
+
+body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    /* height: 100vh;
+    margin:0; */
+    background-color: #003300;
+}
+
+.image-container {
+    width: 200px;
+    height: 300px;
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    overflow: hidden;
+    
+}
+
+.image-container:hover {
+    transform: scale(1.1);
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.modal {
+    color: white;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1;
+}
+.modal p{
+    font-size: 25px;
+    position: absolute;
+    top: 500px;
+    padding: 20px;
+}
+
+.modal-image {
+    /* max-width: 70%;
+    max-height: 90%; */
+    height: 50%;
+    width: 50%;
+    margin: auto;
+    display: block;
+    position: absolute;
+    border: 5px inset black;
+    top: -150px; bottom: 0; left: 0; right: 0;
+}
+
+.close-button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: #fff;
+    font-size: 40px;
+    font-weight: bolder;
+    cursor: pointer;
+    transition: 5s;
+}
+

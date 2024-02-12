@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Community</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .container_home {
+            max-width: 800px;
+            margin: auto;
+            {% comment %} padding: 20px; {% endcomment %}
+            text-align: center;
+            position:relative;right:20vh;
+        }
+
+        #joinChatBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+
+        #outerPageBtn {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #2ecc71;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        .side_container{
+            {% comment %} border:2px solid red; {% endcomment %}
+            height:40vh;
+            width:25vw;
+        }
+        .main_container_room{
+            display:flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="main_container_room">
+<div class='side_container' id='side_container'>
+</div>
+    <div class="container_home">
+        <h1>Welcome to Our Chat Community!</h1>
+        <p>Join our vibrant community to connect with like-minded individuals. Share your thoughts, ideas, and experiences in real-time.</p>
+        <button id="joinChatBtn" onclick="redirectToChat()">Join Chat</button>
+        <div id='sidebar_hide'>
+        <p>Or</p>
+        <p>Create your own outer page and start a discussion!</p>
+        <button id="outerPageBtn" onclick="redirectToOuterPage()">Create Outer Page </button>
+        </div>
+    </div>
+</div>
+
+    <script>
+        function redirectToChat() {
+            console.log('Redirecting to the chat page...');
+        }
+
+        function redirectToOuterPage() {
+            console.log('Redirecting to create an outer page...');
+        }
+    </script>
+
+</body>
+</html>

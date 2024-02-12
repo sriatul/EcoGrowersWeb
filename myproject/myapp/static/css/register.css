@@ -1,0 +1,32 @@
+.form-layout {
+    height: 30em;
+    width: 30em;
+    background-color: rgb(127, 181, 153);
+    border-radius: 1px 50px;
+    background-color: transparent;
+  }
+
+  .form-control {
+    border-radius: 50px;
+    color: black;
+    font-size: 16px;
+    padding: 20px 45px 20px 20px;
+    outline: none;
+  }
+
+  hr {
+    border: 3px solid rgb(39, 70, 39);
+    border-radius: 5px;
+  }
+
+  h1 {
+    color: rgb(4, 57, 22);
+  }
+
+  .errorlist {
+    display: none;
+  }
+
+  p {
+    font-size: 1.5em;
+  }

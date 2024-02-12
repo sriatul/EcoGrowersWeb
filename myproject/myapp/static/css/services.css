@@ -1,0 +1,37 @@
+.services_body{
+    height: 18em;
+}
+.services_icon i{
+    
+    font-size:45px;
+    margin-left: 5em;
+   
+}
+.services_p h4{
+    margin-left: 6em;
+    
+}
+.services_p p{
+    margin-left: 6em;
+    
+}
+.services{
+}
+.services_veg:hover,.services_fruits:hover{
+box-shadow: 2px 2px 5px 4px black;
+}
+
+.services::after{
+    content: "";
+    background-image: url(../images/hwheat.jpg);
+    position: absolute;
+    height: 18em;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    z-index: -1;
+    filter: brightness(40%);
+    background-attachment: fixed;
+
+}

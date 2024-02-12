@@ -1,0 +1,92 @@
+.main {
+
+    height: 25em;
+}
+.main_under {
+    
+    height: 25em;
+
+
+}
+.main_under_first {
+    
+    height: 10em;
+}
+.main_under_third{
+    
+    height: 10em;
+
+
+}
+
+.a1{
+    height: 10em;
+    width: 10em;
+}
+
+.imgSlider {
+	width: 60%;
+	height: 400px;
+	background-image: url(../images/a4.jpg);
+	background-size: 100% 100%;
+
+	display: block;
+	margin: 0 auto;
+	box-shadow: 10px 5px 5px grey;
+	animation: change 20s linear infinite;
+}
+
+@keyframes change {
+	0% {
+		background-image: url(../images/wheat.jpg);
+	}
+	25% {
+		background-image: url(../images/dhaan.jpg);
+	}
+	50% {
+		background-image: url(../images/makka.jpg);
+	}
+	75% {
+		background-image: url(../images/green.png);
+	}
+	100% {
+		background-image: url(../images/rajma.jpg);
+	}
+
+}
+
+
+
+/* Style the image */
+.image-container img {
+    width: 100%;
+    height: 100%;
+    /* object-fit: cover; */
+}
+
+
+    /* Style the text overlay */
+.text-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  /* Adjust the background color and opacity */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #000000; /* Text color */
+    text-align: center;
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.6s;
+}
+
+/* Hover effect to reveal the text */
+.text-overlay:hover  {
+    opacity: 1;
+    background-color: rgba(216, 220, 217, 0.445);
+
+}
+

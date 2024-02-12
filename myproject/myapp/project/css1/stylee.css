@@ -1,0 +1,158 @@
+.Agri{
+    height: 400px;
+    width: auto;
+    /* background-color: rgb(204, 193, 181); */
+    text-align: center;
+    margin: -20px;
+    background: linear-gradient(to right, rgb(223, 214, 214) , rgb(159, 159, 113));
+}
+.Agri h1{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 249, 249);
+
+  }
+   p{
+    font-size: 25px;
+    padding: 10px;
+}
+
+
+.maindiv{
+    height: 700px;
+    width: auto;
+    padding: 10px;
+    }
+    
+   .maindiv img{
+      height: 150px;
+      width: 150px;
+      border-radius: 20px;
+      float: left;
+      margin-left: 20px;
+    }
+    
+    .blogmessage{
+      height: 180px;
+      width: 500px;
+      border-radius: 20px;
+      margin-left: 20px;
+      margin-top: -20px;
+      float: left;
+      font-size: 20px;
+      padding: 10px;
+      color: rgb(255, 157, 157);
+      
+    }
+    .blogmessage p{
+      color: rgb(255, 255, 255);
+      font-size: 20px;
+      margin-top: -5px;
+    }
+
+    
+    span{
+      color: rgb(159, 159, 113);
+      font-weight: 200;
+      font-style: italic;
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    h1{
+      text-align: center;
+      font-size: 50px;
+      margin-top: 20px;
+      color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    }
+
+
+    .line{
+      height: 10px;
+      width: 50%;
+      border-radius: 20px;
+      background-color:rgb(239, 255, 13) ;
+      margin-bottom: 20px;
+      margin-top: -20px;
+    
+    }
+    .linedown{
+      height: 10px;
+      width: 50%;
+      border-radius: 20px;
+      background-color:rgb(239, 255, 13) ;
+      margin-top: -200px;
+      margin-bottom: 30px;
+    }
+
+
+
+/* Style for the button */
+.button {
+    float: right;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #3498db;
+    color: #ffffff;
+    text-decoration: none;
+    border: none;
+    font-weight: bolder;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+    
+  }
+  
+  /* Hover effect */
+  .button:hover {
+    background-color: #2980b9;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+  }
+
+/* this is image scrollable page :start */
+
+
+  div.scroll-container {
+    background-color: #01030d;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+   
+  
+  }
+  
+  div.scroll-container img {
+    padding: 10px;
+    border-radius: 40px;
+  }
+  div.scroll-container h1{
+  color: white;
+  margin-left: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 50px;
+  text-align: left;
+
+  }
+  div.scroll-container p{
+    color: rgb(0, 38, 255);
+    margin-top: -40px;
+  }
+  
+
+.maindiv:hover{
+  background-color: #3d3d29;
+  transition: 2s;
+}
+.linedown:hover{
+  width: 70%;
+  transition: 2s;
+  background-color: white;
+}
+.line:hover{
+  width: 70%;
+  transition: 2s;
+  background-color: white;
+}

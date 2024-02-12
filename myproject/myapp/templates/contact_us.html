@@ -1,0 +1,93 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Title</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta
+		name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href= "{% static 'css/contact.css' %}">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="contactUs">
+			<div class="title">
+				<h2>Get in Touch</h2>
+			</div>
+			<div
+				class="box">
+				<!-- Form -->
+				<div class="contact form">
+					<h3>Send a Message</h3>
+					<form action="">
+						<div class="formBox">
+							<div class="row50">
+								<div class="inputBox">
+									<span>First Name</span>
+									<input type="text" placeholder="Your First Name"/>
+								</div>
+								<div class="inputBox">
+									<span>Last Name</span>
+									<input type="text" placeholder="Your Last Name"/>
+								</div>
+							</div>
+
+							<div class="row50">
+								<div class="inputBox">
+									<span>Email</span>
+									<input type="text" placeholder="Your Email"/>
+								</div>
+								<div class="inputBox">
+									<span>Mobile</span>
+									<input type="text" placeholder="Your Number"/>
+								</div>
+							</div>
+
+						<div class="row100">
+							<div class="inputBox">
+								<span>Message</span>
+								<textarea placeholder="Write Your Message"></textarea>
+							</div>
+						</div>
+						<div class="row100">
+							<div class="inputBox">
+								<input type="submit" value="Send">
+							</div>
+
+					</div>
+				</div>
+			</form>
+		</div>
+		<!-- Info -->
+		<div class="contact info">
+            <h3>Contact Info</h3>
+            <div class="infoBox">
+                <div>
+                    <span><ion-icon name="location"></ion-icon></span>
+                    <p>New Katra , Allahabad <br> Uttar Pradesh </p>
+                </div>
+                <div>
+                    <span><ion-icon name="mail"></ion-icon></span>
+                    <a href="mailto:infofarming@gmail.com">infofarming@gmail.com
+                    </a>
+                </div>
+                <div>
+                    <span><ion-icon name="call"></ion-icon></span>
+                    <a href="tel:+917668314333">+91 7668314333</a>
+                </div>
+
+            </div>
+        </div>
+		<!-- Map -->
+		<div class="contact map">
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3602.0001658713563!2d81.854863875123!3d25.47166992052938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399aca9ace50a863%3A0xffd11ac6a226ed88!2sNational%20Skill%20Training%20Institute%20(%20Women)!5e0!3m2!1sen!2sin!4v1697383141769!5m2!1sen!2sin" width="700" height="550" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+		</div>
+
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+	</body>
+</html>

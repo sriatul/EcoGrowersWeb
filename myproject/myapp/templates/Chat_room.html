@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+    {% comment %} <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"> {% endcomment %}
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+  <body>
+    <div class="container chat_room">
+        <div class="row ">
+        <div id = "display" class="col-6 shadow-lg ">
+       <b>Saksham :{{room}}</b>
+        </div>
+    </div>
+    </div>
+
+     
+       <script>
+        $(document).ready(function(){
+            setInterval(function(){
+                $.ajax({
+                    type:'GET',
+                    url:"/getMessages/{{room}}/",
+                    success:function(response){
+                        $("#display").empty();
+                        for (var key in response.messages){
+                            var temp = "<div class='container darker'><b>"+response.messages[key].user+"</b><p>"+response.messages[key].value+"</p><span class='time-left'>"+response.messages[key].date+"</span></div>";
+                                $("#display").append(temp);
+                        }
+                    },
+                    error:function(response){
+                        alert('An error occured')
+                    }
+                });
+            },1000);
+        })
+    </script>
+
+    <div class="container chat_room">
+        <div class="row ">
+            <div  class="col-6 shadow-lg ">
+       <form id="post-form">
+        {% csrf_token %}
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="username" id="username" value="{{username}}" placeholder="Room name"/>
+        </div>
+        <div class="form-group">
+            <input type="hidden" class="form-control" name="room_id" id="room_id" value="{{room_details.id}}" placeholder="Username"/>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" name="message" id="message" placeholder="Message"/>
+        </div>
+        <button type="submit" class="btn btn-primary" value="Send">Send</button>
+    </form>
+    
+      </div>
+      </div>
+      </div>
+
+
+ 
+
+    <!-- Optional JavaScript -->
+    <script type="text/javascript">
+        $(document).on('submit', '#post-form', function(e){
+            e.preventDefault();
+            
+            $.ajax({
+                type: 'POST',
+                url: '/send',
+                data: {
+                    username: $('#username').val(),
+                    room_id: $('#room_id').val(),
+                    message: $('#message').val(),
+                    csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val(),
+                },
+                success: function(data) {
+                    
+                }
+            });
+            document.getElementById('message').value = '';
+        });
+    </script>
+    
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>

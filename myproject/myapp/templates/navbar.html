@@ -1,0 +1,148 @@
+{% load static %}
+	
+     
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+	 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+    {% comment %} Font-Awesome {% endcomment %}
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	 <link rel="stylesheet" href="{% static 'css/mynav.css' %}">
+
+	<body>
+		<!-- Start Banner -->
+
+        <div class="banner " >
+            <div class="banner_content">
+                <a href="index.html">
+                    <i class="fa-solid fa-seedling fa-2xl" style="color: lightgreen;"></i>EcoGrowersWeb.com</a>
+            </div>
+
+            <div class="banner_content">
+                <i class="fa-solid fa-location-dot fa-2xl"  style="color: #C7A54E;"aria-hidden="true"></i>
+                <a href="https://maps.app.goo.gl/E7WjTgFMa2BNT6ZG8">
+                    New Katra Allahabad
+                </a>
+            </div>
+
+            <div class="banner_content">
+                <a href="#"><i class="fa fa-mobile-screen fa-2xl "style="color:#CFD8DC ;" aria-hidden="true"></i>
+                (+91)9887456123</a>
+                
+            </div>
+
+            <div class="banner_content">
+                <a href="mail.google.com"><i class="fa-regular fa-envelope fa-2xl" style="color:#CFD8DC ;"></i>infofarming@gmail.com</a>
+            </div>
+
+            <div class="banner_content">
+                <a href="#"><i class="fa-regular fa-clock fa-2xl"style="color: #EEEEEE ;"></i>
+                24 x 7 *Weekends working</a>
+            </div>
+            
+        </div>
+    <!-- End Banner -->
+
+
+
+	<header class="navdiv shadow-lg" id="navdiv" >
+		<div class="logo col-4">
+			{% comment %} <a href=""><img src="static/images/logo.jpg" style="height: 3em;
+				width: 3em;"alt="Logo" class="logo ml-4"></a>  {% endcomment %}
+		</div>
+
+		
+		<ul class="nav justify-content-center">
+			<li class="nav-item">
+			  <a class="nav-link active" href="{% url 'home' %}">Home</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="{% url 'blog' %}">Blogs</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'price' %}">Mandi</a>
+			</li>
+			<li class="nav-item">
+			  <a class="nav-link" href="#newsletter">Newsletter</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="#about">About</a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+			</li>
+
+			{% if user.is_authenticated %}
+			<ul class="nav d-flex justify-content-end"style="margin-left:6em">
+					<li class="nav-item"><a class="nav-link">Welcome, {{ user }}	</a>
+					</li>
+					  <li class="nav-item">			
+						<a class="nav-link" href="{% url 'user-logout' %}">Sign out  
+							<i class="fa fa-sign-out" aria-hidden="true"></i> 
+						</a>
+					  </li>		
+			</ul>	
+					  {% else %} 
+		
+		  <ul class="nav d-flex justify-content-end " style="margin-left:6em">
+			<i class="fa-solid fa-user-plus mt-3"></i>
+			<li class="nav-item">
+			  <a class="nav-link " href="{% url 'register' %}">Register</a>
+			</li>
+			<i class="fa-solid fa-right-to-bracket mt-3" ></i>
+			<li class="nav-item">
+				<a class="nav-link" href="{% url 'login' %}">Login</a>
+			</li>
+		   
+		  </ul>
+		  {% endif %}
+		</header>
+
+
+
+{% comment %} 
+<script>
+	document.addEventListener('DOMContentLoaded', () => {
+		let navdiv = document.getElementById('navdiv');
+		document.addEventListener('scroll', () => {
+			if (window.pageYOffset > 70) {
+				navdiv.style.position = "fixed";
+				navdiv.style.top = "0";
+				navdiv.style.backgroundColor="black";
+				// navdiv.classList.remove('hidden')
+	
+	
+			} else {
+				navdiv.style.position = "";
+				navdiv.style.top = "";
+				navdiv.style.backgroundColor="";
+			}
+			
+		}
+		);
+	});
+	
+	
+	$(document).ready(function(){
+		$(".navbar .nav-link").on('click', function(event) {
+	
+			if (this.hash !== "") {
+	
+				event.preventDefault();
+	
+				var hash = this.hash;
+	
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 700, function(){
+					window.location.hash = hash;
+				});
+			} 
+		});
+	});
+	
+</script>		 {% endcomment %}
+
+    
